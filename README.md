@@ -19,6 +19,9 @@ ccswitch 风格的模型请求覆盖插件（DeepSeek Harness）。
 
 Host 侧对进程级 `globalThis.fetch` 做一层按 baseURL 前缀匹配的包装（内置 LLM adapter 均通过它发请求），不改写任何 adapter 内部；配置字段是 volatile 的，保存后**立即生效**，无需重启。
 
+## 图形配置
+<img width="1606" height="1362" alt="image" src="https://github.com/user-attachments/assets/2ceb7420-c284-43c4-b5fc-e84db62a90f5" />
+
 ## 手动配置（cordis.patch.yml）
 
 ```yaml
