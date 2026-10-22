@@ -1,0 +1,29 @@
+# dsh-model-extra-config
+#
+# Installs the Host half (fetch hook + volatile overrides config); package.json's
+# `dsh.client` declaration makes DSH discover client.js for the Web UI, which
+# adds a request-override editor to every provider card on the Models settings
+# page.
+#
+# Optional configuration (the whole `overrides` field is volatile and normally
+# edited through the settings UI; the shape is):
+#
+#   - insert:
+#       - id: dsh-model-extra-config
+#         name: dsh-model-extra-config
+#         config:
+#           overrides:
+#             openrouter:                 # provider route name
+#               body:                     # deep-merged into every request body
+#                 provider:
+#                   only: ["GPT Hub 3"]
+#               headers:                   # merged into request headers
+#                 X-Relay-Tag: "xxx"
+#               models:                   # model-level overrides win over the level above
+#                 openai/gpt-4o:
+#                   body:
+#                     provider: { only: ["GPT Hub 1"] }
+#                   headers: {}
+- insert:
+    - id: dsh-model-extra-config
+      name: dsh-model-extra-config

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "模型请求覆盖",
+    "description": "按 provider 与模型两级覆盖模型请求：把额外 JSON 字段（如 OpenRouter 的渠道路由 provider.only/order）深合并进请求 body，并附加自定义 header，在模型设置页每个 provider 卡片上编辑。"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model Request Overrides",
+    "description": "Per-provider and per-model request overrides: deep-merge extra JSON body fields (e.g. OpenRouter provider routing) and custom headers into every model request, edited on each provider card of the Models settings page."
+  }
+}

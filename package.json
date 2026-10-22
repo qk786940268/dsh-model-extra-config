@@ -1,0 +1,50 @@
+{
+  "name": "dsh-model-extra-config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Per-provider and per-model request overrides for DSH model calls: deep-merge extra JSON body fields and custom headers into every model request, like ccswitch's extra_body/headers for relay endpoints such as OpenRouter.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "openrouter",
+    "extra-body",
+    "headers",
+    "relay"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [],
+      "external": [
+        "react",
+        "react/jsx-runtime",
+        "@deepseek-ai/cordis",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  }
+}
